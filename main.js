@@ -13,7 +13,10 @@ let gpArry = [];
 add.addEventListener("click", () => {
   console.log(unitLoad.value);
   if (
-    courseName.value === "" || (unitLoad.value < 0 && unitLoad.value > 5 ) ) {
+    courseName.value === "" ||
+    unitLoad.value < 0 ||
+    grade.value < 0
+    ) {
     alert("Wrong input,check and try again");
     
   } else {
