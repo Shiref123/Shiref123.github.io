@@ -25,21 +25,22 @@
       <div class="wrapper">
         <div class="container text-center ">
         <h1 style="color:white">GPA Calculator</h1>
-        <div class="form row">
+        <form class="row" action="#add">
             <div class="col">
                 <input id="course-name" class="form-control" type="text" placeholder="Course Name" >
             </div>
             <div class="col">
-                <input id="unit-load" class="form-control" type="number" placeholder="Unit" min="2" max="4" required>
+                <input id="unit-load" class="form-control" type="number" placeholder="Unit" value="3" min="2" max="4" required>
             </div>
             <div class="col">
                 <input id="grade" class="form-control" type="number" placeholder="grade" required>
             </div>
             <div class="col-2">
-                <input id="add" class="btn btn-primary" type="button" value="Add">
+                <input id="add" class="btn btn-primary" type="submit" value="Add">
 
             </div>
-        </div></div>
+        </form>
+    </div>
         <table id="table" class="table table-striped table-hover table-bordered display-none bg-white shadow rounded-3">
             <thead>
                 <tr>
