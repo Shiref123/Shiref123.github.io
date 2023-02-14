@@ -7,7 +7,8 @@ const tfoot = document.querySelector("#tfoot");
 const table = document.querySelector("#table");
 const calcGp = document.querySelector("#calc-gp");
 const clear = document.querySelector("#clear");
-let x = 1; 
+let x = 1;
+let y = 0; 
 let gpArry = [];
 
 add.addEventListener("click", () => {
@@ -23,11 +24,20 @@ add.addEventListener("click", () => {
       x++; 
     }
     tdCourseName.innerHTML = courseName.value;
+    const tdgpaSubject = document.createElement("td");
+    if(grade.value ==""){
+      tdgpaSubject.innerHTML=` ${(y)}`;}
+    else{tdgpaSubject.innerHTML =`${(((grade.value) / 10) - 5).toFixed(2)} `;}
     const tdUnitLoad = document.createElement("td");
-    tdUnitLoad.innerHTML = unitLoad.value;
+    if(unitLoad.value == ""){
+      tdUnitLoad.innerHTML=` ${(y)}`;}
+    else{tdUnitLoad.innerHTML = unitLoad.value;}
     const tdGrade = document.createElement("td");
-    tdGrade.innerHTML = grade.value;
+    if(grade.value ==""){
+      tdGrade.innerHTML=` ${(y)}`;}
+    else{tdGrade.innerHTML = grade.value;}
     tr.appendChild(tdCourseName);
+    tr.appendChild(tdgpaSubject)
     tr.appendChild(tdUnitLoad);
     tr.appendChild(tdGrade);
     tbody.appendChild(tr);
@@ -59,6 +69,7 @@ calcGp.addEventListener("click", () => {
   const tr = document.createElement("tr");
 
   tdTotalUnitLoad = document.createElement("td");
+  tdTotalUnitLoad.setAttribute("colspan", "2");
   tdTotalUnitLoad.innerHTML = `your total unit load is ${unitLoads}`;
 
   tdGpa = document.createElement("td");
