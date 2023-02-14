@@ -7,21 +7,29 @@ const tfoot = document.querySelector("#tfoot");
 const table = document.querySelector("#table");
 const calcGp = document.querySelector("#calc-gp");
 const clear = document.querySelector("#clear");
-
+let x = 1; 
 let gpArry = [];
 
 add.addEventListener("click", () => {
   console.log(unitLoad.value);
+<<<<<<< HEAD
   if (
     courseName.value === "" ||
     unitLoad.value < 0 ||
     grade.value < 0
     ) {
+=======
+  if ((unitLoad.value < 0 || unitLoad.value > 5) || (grade.value < 0 || grade.value > 100)) {
+>>>>>>> ecdbd0f35145b6bad656106837f70f50eecf8e5a
     alert("Wrong input,check and try again");
-    
   } else {
+  console.log(unitLoad.value);
     const tr = document.createElement("tr");
     const tdCourseName = document.createElement("td");
+    if(courseName.value == ""){
+      courseName.value = `subject NO.${x}`; 
+      x++; 
+    }
     tdCourseName.innerHTML = courseName.value;
     const tdUnitLoad = document.createElement("td");
     tdUnitLoad.innerHTML = unitLoad.value;
@@ -64,19 +72,20 @@ calcGp.addEventListener("click", () => {
   tdGpa = document.createElement("td");
   tdGpa.setAttribute("colspan", "2");
   tdGpa.innerHTML = `your GPA is ${(
-  ((sumOfProductOfUnitLoadsAndGrades / unitLoads)/10)-5
+    ((sumOfProductOfUnitLoadsAndGrades / unitLoads) / 10) - 5
   ).toFixed(2)} `;
 
   tr.appendChild(tdTotalUnitLoad);
   tr.appendChild(tdGpa);
-    if (tfoot.querySelector("tr") !== null) {
-        tfoot.querySelector("tr").remove();
-    }
+  if (tfoot.querySelector("tr") !== null) {
+    tfoot.querySelector("tr").remove();
+  }
   tfoot.appendChild(tr);
 });
 
 clear.addEventListener("click", () => {
   gpArry = [];
+  x=1;
   tbody.querySelectorAll("*").forEach((child) => child.remove());
   if (tfoot.querySelector("tr") !== null) {
     tfoot.querySelector("tr").remove();
