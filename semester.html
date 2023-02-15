@@ -14,67 +14,71 @@
 
 </head>
 
-<body>
-    <!--Start First Section-->
-    <section class="section1">
-    <!-------------------------------------------------------------------------------------------------->
-     <div class="image">
-     </div>
-     <div class="page ">
-        <img decoding="async" src="https://via.placeholder.com/0075ff/FFF?" alt="" />
-     </div> 
-     <!-------------------------------------------------------------------------------------------------->
-     <section class="section2">
-      <div class="wrapper">
-        <div class="container text-center ">
-        <h1 style="color:white">GPA Calculator</h1>
-        <form class="row" action="#add">
-            <div class="col">
-                <input id="course-name" class="form-control" type="text" placeholder="Course Name" >
-            </div>
-            <div class="col">
-                <input id="unit-load" class="form-control" type="number" placeholder="Unit" min="2" max="4" required>
-            </div>
-            <div class="col">
-                <input id="grade" class="form-control" type="number" placeholder="grade" min="0" max="100" required>
-            </div>
-            <div class="col-2">
-                <input id="add" class="btn btn-primary" type="submit" value="Add">
+<body >
+  <section class="section2">
+    <div class="wrapper">
+      <div class="container text-center ">
+      <h1 style="color:white">GPA Calculator</h1>
+      <form class="row" action="#add">
+          <div class="col">
+              <input id="course-name" class="form-control" type="text" placeholder="Course Name" >
+          </div>
+          <div class="col">
+              <input id="unit-load" class="form-control" type="number" placeholder="Unit" min="1" max="4" required>
+          </div>
+          <div class="col">
+              <input id="grade" class="form-control" type="number" placeholder="grade" min="0" max="100" required>
+          </div>
+          <div class="col-2">
+              <input id="add" class="btn btn-primary" type="submit" value="Add">
 
-            </div>
-        </form>
-    </div>
-        <table id="table" class="table table-striped table-hover table-bordered display-none bg-white shadow rounded-3 text-center">
-            <thead class="bg-info">
-                <tr>
-                    <th>Course Name</th>
-                    <th>GPA Subject</th>
-                    <th>Unit Load</th>
-                    <th>Grade</th>
-                    <th>Rank</th>
-                </tr>
-            </thead>
-            <tbody id="tbody">
-        
-            </tbody>
-            <tfoot id="tfoot" class="bg-info">
-        
-            </tfoot>
-        </table>
-        <div class="row text-center mb-3">
-            <div class="col">
-                <input id="calc-gp" class="btn btn-primary display-none" type="button" value="Calc GP">
-            </div>
-            <div class="col">
-            <input id="clear" class="btn btn-warning display-none" type="button" value="Clear">
-            </div>
-        </div>
-    </div>
-  </section>
-    </section>
-    <!--End First section-->
+          </div>
+      </form>
+  </div>
+      <table id="table" class="table table-striped table-hover table-bordered display-none bg-white shadow rounded-3 text-center">
+          <thead class="bg-info">
+              <tr>
+                  <th>Course Name</th>
+                  <th>GPA Subject</th>
+                  <th>Unit Load</th>
+                  <th>Grade</th>
+                  <th>Rank</th>
+              </tr>
+          </thead>
+          <tbody id="tbody">
+      
+          </tbody>
+          <tfoot id="tfoot" class="bg-info">
+      
+          </tfoot>
+      </table>
+      <div class="row text-center mb-3">
+          <div class="col">
+              <input id="calc-gp" class="btn btn-primary display-none" type="button" value="Calc GP">
+          </div>
+          <div class="col">
+          <input id="clear" class="btn btn-warning display-none" type="button" value="Clear">
+          </div>
+      </div>
+  </div>
+</section>
 
 
+<div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div >
+     
     <script src="/cdnjs/popper.min.js.map"></script>
     <script src="bootstrap-5.2.3-dist/js/jquery-3.6.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

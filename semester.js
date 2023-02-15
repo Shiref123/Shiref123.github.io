@@ -31,7 +31,7 @@ function calcRank(a){
 
 add.addEventListener("click", () => {
   console.log(unitLoad.value);
-  if ((unitLoad.value < 0 || unitLoad.value > 5) || (grade.value < 0 || grade.value > 100)) {
+  if ((unitLoad.value < 0 || unitLoad.value >= 5) || (grade.value < 0 || grade.value > 100)) {
     alert("Wrong input,check and try again");
   } else {
   console.log(unitLoad.value);
