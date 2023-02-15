@@ -11,6 +11,24 @@ let x = 1;
 let y = 0; 
 let gpArry = [];
 
+function calcRank(a){
+  if(a>=3.5){
+    return "A";
+  }
+  else if(a<3.5 && a>=2.5){
+    return "B";
+  }
+  else if(a<2.5 && a>=1.5){
+    return "C";
+  }
+  else if(a<1.5 && a>=1){
+    return "D";
+  }
+  else if(a<1){
+    return "F";
+  }
+}
+
 add.addEventListener("click", () => {
   console.log(unitLoad.value);
   if ((unitLoad.value < 0 || unitLoad.value > 5) || (grade.value < 0 || grade.value > 100)) {
@@ -25,29 +43,35 @@ add.addEventListener("click", () => {
     }
     tdCourseName.innerHTML = courseName.value;
     const tdgpaSubject = document.createElement("td");
-    if(grade.value ==""){
-      tdgpaSubject.innerHTML=` ${(y)}`;}
+    if(grade.value =="" || grade.value < 60){
+      tdgpaSubject.innerHTML=` ${("-")}`;}
     else{tdgpaSubject.innerHTML =`${(((grade.value) / 10) - 5).toFixed(2)} `;}
     const tdUnitLoad = document.createElement("td");
     if(unitLoad.value == ""){
-      tdUnitLoad.innerHTML=` ${(y)}`;}
+      tdUnitLoad.innerHTML=` ${("-")}`;}
     else{tdUnitLoad.innerHTML = unitLoad.value;}
     const tdGrade = document.createElement("td");
     if(grade.value ==""){
-      tdGrade.innerHTML=` ${(y)}`;}
+      tdGrade.innerHTML=` ${("-")}`;}
     else{tdGrade.innerHTML = grade.value;}
+    const tdRank = document.createElement("td");
+    if(grade.value ==""){
+      tdRank.innerHTML=` ${("-")}`;}
+    else{tdRank.innerHTML = calcRank((((grade.value) / 10) - 5));}
     tr.appendChild(tdCourseName);
     tr.appendChild(tdgpaSubject)
     tr.appendChild(tdUnitLoad);
     tr.appendChild(tdGrade);
+    tr.appendChild(tdRank);
     tbody.appendChild(tr);
     table.classList.remove("display-none");
     calcGp.classList.remove("display-none");
     clear.classList.remove("display-none");
+    if(grade.value >=60){
     gpArry.push({
       unitLoad: unitLoad.value,
       grade: grade.value,
-    });
+    });}
     console.log(gpArry);
     courseName.value = "";
     unitLoad.value = "";
@@ -69,7 +93,7 @@ calcGp.addEventListener("click", () => {
   const tr = document.createElement("tr");
 
   tdTotalUnitLoad = document.createElement("td");
-  tdTotalUnitLoad.setAttribute("colspan", "2");
+  tdTotalUnitLoad.setAttribute("colspan", "1");
   tdTotalUnitLoad.innerHTML = `your total unit load is ${unitLoads}`;
 
   tdGpa = document.createElement("td");
@@ -78,8 +102,15 @@ calcGp.addEventListener("click", () => {
     ((sumOfProductOfUnitLoadsAndGrades / unitLoads) / 10) - 5
   ).toFixed(2)} `;
 
+  tdTotalRank = document.createElement("td");
+  tdTotalRank.setAttribute("colspan","2");
+  tdTotalRank.innerHTML = `your Rank is ${calcRank((
+    ((sumOfProductOfUnitLoadsAndGrades / unitLoads) / 10) - 5
+  ))} `;
+
   tr.appendChild(tdTotalUnitLoad);
   tr.appendChild(tdGpa);
+  tr.appendChild(tdTotalRank);
   if (tfoot.querySelector("tr") !== null) {
     tfoot.querySelector("tr").remove();
   }
