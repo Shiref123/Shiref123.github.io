@@ -98,9 +98,19 @@
         <div class="card shadow tab-pane show active fade" role="tabpanel" style="width:100%; " id="semester">
           <h5 class="card-title mt-3 ms-3">Your Subject</h5>
           <div class="card-body">
-            <table class="table table-bordered table-responsive me-2 text-center " id="table">
+            <table class="table table-borderless table-responsive me-2 text-center " onchange="calcGp()" id="se-gpa-table">
               <tbody class="tbody">
-                <tr id="table-tr1">
+                <tr id="table-tr">
+
+                  <td><input type="text" class="form-control" id="course-name" placeholder="Course Name"
+                      required></td>
+                  <td><input type="number" class="form-control" id="credits" placeholder="Credits"  required>
+                  </td>
+                  <td><input type="number" class="form-control" id="grade" placeholder="Grade" required>
+                  </td>
+                  <td><button onclick="remove(this)" class ="btn"><i class="bi bi-trash3-fill text-danger"></i></button></td>
+                </tr>
+                <tr id="table-tr">
 
                   <td><input type="text" class="form-control" id="course-name" placeholder="Course Name"
                       required></td>
@@ -118,7 +128,7 @@
                   </td>
                   <td><input type="number" class="form-control" id="grade" placeholder="Grade" required>
                   </td>
-                  <td><button  onclick="remove()" class="btn"><i class="bi bi-trash3-fill text-danger"></i></button></td>
+                  <td><button  onclick="remove(this)" class="btn"><i class="bi bi-trash3-fill text-danger"></i></button></td>
                 </tr>
                 <tr id="table-tr">
 
@@ -128,17 +138,7 @@
                   </td>
                   <td><input type="number" class="form-control" id="grade" placeholder="Grade" required>
                   </td>
-                  <td><button  onclick="remove()" class="btn"><i class="bi bi-trash3-fill text-danger"></i></button></td>
-                </tr>
-                <tr id="table-tr">
-
-                  <td><input type="text" class="form-control" id="course-name" placeholder="Course Name"
-                      required></td>
-                  <td><input type="number" class="form-control" id="credits" placeholder="Credits"  required>
-                  </td>
-                  <td><input type="number" class="form-control" id="grade" placeholder="Grade" required>
-                  </td>
-                  <td><button  onclick="remove()" class="btn"><i class="bi bi-trash3-fill text-danger"></i></button></td>
+                  <td><button  onclick="remove(this)" class="btn"><i class="bi bi-trash3-fill text-danger"></i></button></td>
                 </tr>
                 
                 <tr id="table-tr">
@@ -149,7 +149,7 @@
                   </td>
                   <td><input type="number" class="form-control" id="grade" placeholder="Grade" required>
                   </td>
-                  <td><button  onclick="remove()" class="btn"><i class="bi bi-trash3-fill text-danger"></i></button></td>
+                  <td><button  onclick="remove(this)" class="btn"><i class="bi bi-trash3-fill text-danger"></i></button></td>
                 </tr>
               </tbody>
             </table>
