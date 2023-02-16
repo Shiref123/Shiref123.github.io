@@ -1,0 +1,58 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "Cairo", sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Cairo", sans-serif;
+}
+.section1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(61, 48, 48, 0.5), rgba(31, 26, 26, 0.5)),
+    url(/uni_cover_psd.jpg) no-repeat  center ;
+    background-size: cover;
+    
+}
+
+.separator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    width: 100%;
+    max-width: 5.4rem;
+    height: 0.2rem;
+    background-color: #ffffff;
+    position: relative;
+}
+.asterisk{
+    font-size: 1.2rem;
+    color: transparent;
+    margin: 0 0.6rem;
+    color: white;
+}
+.imagemethod{
+    display: flex;
+    justify-content: center;
+   
+}
+.imagemethod img{
+    width: 30px;
+    height: 100%;
+    width: 100%;
+}
