@@ -118,3 +118,19 @@ function getData() {
   console.log(records); 
   calcTotal(records);
 }
+const button = document.getElementById("button");
+window.onscroll = () =>{
+  if (window.scrollY >= 400) {
+    button.style.display ="block"
+  }else{
+    button.style.display ="none"
+
+  }
+}
+button.addEventListener("click",()=>{
+  window.scrollTo({
+    left:0,
+    top:0,
+
+  })
+})
