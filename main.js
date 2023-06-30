@@ -120,7 +120,7 @@ function getData() {
 }
 const button = document.getElementById("button");
 window.onscroll = () =>{
-  if (window.scrollY >= 400) {
+  if (window.scrollY >= 600) {
     button.style.display ="block"
   }else{
     button.style.display ="none"

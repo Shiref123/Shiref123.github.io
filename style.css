@@ -10,14 +10,23 @@
     right: 15px;
     bottom: 15px;
     border: none;
-    background-color: red;
+    background-color: #0d6efd;
     color: white;
     padding: 4px 5px;
-    border-radius: 9px;
+    border-radius: 50%;
     font-weight: 800;
     font-size: 16px;
     display: none;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    cursor: pointer;
 }
+@keyframes shake {
+    0%{bottom: 11px;}
+    100%{bottom: 16px;}
+  }
 
 body{
     font-family: "Cairo", sans-serif;
