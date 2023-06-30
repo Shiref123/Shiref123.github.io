@@ -57,13 +57,35 @@ if (TotalGPA){
 }else{
   document.getElementById("gpa").value = 0; 
 }
+function calcRankAll(score) {
+  if (score >= 0) {
+    if (score >= 3.5) {
+      return "A";
+    } else if (score < 3.5 && score >= 2.5) {
+      return "B";
+    } else if (score < 2.5 && score >= 1.5) {
+      return "C";
+    } else if (score < 1.5 && score >= 1) {
+      return "D";
+    } else if (score < 1) {
+      return "F";
+    }
+  }
+  return "F"; // Return an empty string if the score is invalid or negative
+}
+let gpaRank = document.getElementById("rank"); 
+if (TotalGPA){
+  gpaRank.value = calcRankAll(TotalGPA); 
+}else{
+  document.getElementById("rank").value = "F"; 
+}
 if (gpaRes.value >= 1){
-  gpaRes.classList.remove("bg-warning");
+  gpaRes.classList.remove("bg-danger");
   gpaRes.classList.add("bg-success");
   gpaRes.classList.add("text-white");
 
 }else {
-  gpaRes.classList.remove("bg-warning");
+  gpaRes.classList.remove("bg-success");
   gpaRes.classList.add("bg-danger");
   gpaRes.classList.add("text-white");
 }
@@ -95,7 +117,7 @@ function add() {
     '<input type="number" class="form-control" id="grade" min="0" max="100" placeholder="Grade" required>';
   var ButtonCell = lastRow.insertCell(-1);
   ButtonCell.innerHTML =
-    '<button  onclick="remove(this)" class="btn"><i class="bi bi-trash3-fill text-danger"></i></button>';
+    '<button  onclick="remove(this)" class="btn"><i class="fa-solid fa-trash-can text-danger"></i></button>';
 }
 
 function getData() {
