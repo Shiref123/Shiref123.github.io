@@ -49,7 +49,7 @@ body{
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(61, 48, 48, 0.5), rgba(31, 26, 26, 0.5)),
-    url(/uni_cover_psd.jpg) no-repeat  center ;
+    url(../gpaCalc/uni_cover_psd.jpg) no-repeat  center ;
     background-size: cover;
     
 }
