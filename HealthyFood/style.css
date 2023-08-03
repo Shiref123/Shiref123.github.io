@@ -7,6 +7,16 @@
     color: black;
     text-transform: uppercase;
 }
+html::-webkit-scrollbar{
+    width: 12px;
+}
+html::-webkit-scrollbar-track{
+    background:#fff;
+}
+html::-webkit-scrollbar-thumb{
+    background-color:#ffc107;
+    border-radius:0.5rem;
+}
 .navbar-brand span{
     font-size: 2rem;
     font-weight: bold;
