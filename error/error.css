@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #04253b;
+}
+.container {
+    text-align: center;
+    user-select: none;
+}
+.container h1 {
+    font-size: 6rem;
+}
+.container h1 .cogg {
+    animation-name: animate1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+.container p {
+    margin-top: 20px;
+    word-spacing: 5px;
+}
+.spider {
+    font-size: 3rem;
+    animation: animate2 2s linear infinite alternate;
+    position: absolute;
+    top: 0;
+    transform: rotate(180deg);
+}
+.spider::after {
+    content: "";
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    width: 0.5px;
+    height: 30vh;
+    opacity: 0.5;
+    background: #fff;
+}
+.spider::before {
+    content: "404";
+    position: fixed;
+    top: -30px;
+    left: -12px;
+    opacity: 0.5;
+    transform: rotate(180deg);
+}
+/* animation */
+
+@keyframes animate1 {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes animate2 {
+    0% {opacity: 0.1}
+    100% {
+        opacity: 1;
+        top:20%
+    }
+}
