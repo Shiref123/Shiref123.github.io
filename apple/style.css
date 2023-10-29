@@ -795,7 +795,7 @@ header .cart-icon span{
   
   .im1 {
     grid-area: im1;
-    background-image: url(/image/n1.jpg);
+    background-image: url(../apple/image/n1.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 12px;
@@ -817,7 +817,7 @@ header .cart-icon span{
   
   .im2 { 
     grid-area: im2;
-    background-image: url(/image/n8.jpg);
+    background-image: url(../apple/image/n8.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 12px; 
@@ -826,7 +826,7 @@ header .cart-icon span{
   
   .im3 {
     grid-area: im3; 
-    background-image: url(/image/n3.jpg);
+    background-image: url(../apple/image/n3.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 12px; 
@@ -835,7 +835,7 @@ header .cart-icon span{
   
   .im4 {
     grid-area: im4; 
-    background-image: url(/image/n6.jpg);
+    background-image: url(../apple/image/n6.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 12px;
@@ -844,7 +844,7 @@ header .cart-icon span{
   
   .im5 {
     grid-area: im5; 
-    background-image: url(/image/n2.jpg);
+    background-image: url(../apple/image/n2.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 12px; 
@@ -853,7 +853,7 @@ header .cart-icon span{
   
   .im6 {
     grid-area: im6; 
-    background-image: url(/image/n4.jpg);
+    background-image: url(../apple/image/n4.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 12px; 
@@ -862,7 +862,7 @@ header .cart-icon span{
   
   .im7 {
     grid-area: im7; 
-    background-image: url(/image/n5.jpg);
+    background-image: url(../apple/image/n5.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 12px; 
@@ -871,7 +871,7 @@ header .cart-icon span{
   
   .im8 {
     grid-area: im8;
-    background-image: url(/image/n9.png);
+    background-image: url(../apple/image/n9.png);
     background-position: center;
     background-size: cover;
     border-radius: 12px; 
@@ -880,14 +880,14 @@ header .cart-icon span{
   
   .im9 {
     grid-area: im9;
-    background-image: url(/image/n7.jpg);
+    background-image: url(../apple/image/n7.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 12px; 
     transition: 0.5s linear;
     }
   .section-contact{
-      background-image: url(/image/n5.jpg);
+      background-image: url(../apple/image/n5.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
