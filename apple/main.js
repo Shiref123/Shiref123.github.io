@@ -279,7 +279,7 @@ function initApp(){
         newDiv.dataset.name = value.dataname;
         newDiv.innerHTML = `
         <div class="image">
-        <img src="/image/${value.image}" alt=""></div><hr>
+        <img src="../apple/image/${value.image}" alt=""></div><hr>
         <h4>${value.name}</h4>
         <h6>${value.price} $</h6>
         <p>${value.detal}</p>
@@ -310,7 +310,7 @@ function reloadCard(){
             newDiv.setAttribute('id',`myproduct${key}`);
             newDiv.innerHTML = `
             <div class="image">
-            <img src="/image/${value.image}" alt=""></div>
+            <img src="../apple/image/${value.image}" alt=""></div>
             <h4>${value.name}</h4>
             <div class="edit">
             <button class="plus" onclick="changeQuantity(${key},${value.quantity + 1})">+</button>
