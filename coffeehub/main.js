@@ -134,7 +134,7 @@ function initApp(){
         newDiv.classList.add('product');
         newDiv.innerHTML = `
         <div class="image">
-        <img src="/image/${value.image}" alt=""></div>
+        <img src="../coffeehub/image/${value.image}" alt=""></div>
         <div class="detals">
                     <h4>${value.name}</h4>
                     <p>${value.price}</p>
@@ -169,7 +169,7 @@ function reloadCard(){
             newDiv.setAttribute('id',`myproduct${key}`);
             newDiv.innerHTML = `
             <div class="image">
-            <img src="/image/${value.image}" alt=""></div>
+            <img src="../coffeehub/image/${value.image}" alt=""></div>
             <h4>${value.name}</h4>
             <div class="edit">
             <button class="plus" onclick="changeQuantity(${key},${value.quantity + 1})">+</button>
