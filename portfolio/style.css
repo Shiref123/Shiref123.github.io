@@ -121,6 +121,7 @@ section{
     border-radius: 50%;
     font-size: 2rem;
     cursor: pointer;
+    background: var(--bg-color);
     box-shadow: var(--box-shadow);
     z-index: 1000;
     text-align: center;
@@ -170,6 +171,7 @@ section{
     box-shadow: var(--box-shadow);
     z-index: 1000;
     text-align: center;
+    background: var(--bg-color);
     color: var(--black);
 
 }
@@ -291,6 +293,7 @@ section{
     align-items: center;
     justify-content: space-between;
 }
+
 .about .row .progress .bar{
     box-shadow: var(--box-shadow);
     border-radius: 5rem;
@@ -304,36 +307,7 @@ section{
     background: var(--green);
     border-radius: 5rem;
 }
-.about .row .progress .bar-1-1 span{
-    width: 95%;
-}
-.about .row .progress .bar-1-2 span{
-    width: 85%;
-}
-.about .row .progress .bar-1-3 span{
-    width: 50%;
-}
-.about .row .progress .bar-1-4 span{
-    width: 90%;
-}
-.about .row .progress .bar-1-5 span{
-    width: 60%;
-}
-.about .row .progress .bar-2-1 span{
-    width: 80%;
-}
-.about .row .progress .bar-2-2 span{
-    width: 55%;
-}
-.about .row .progress .bar-2-3 span{
-    width: 75%;
-}
-.about .row .progress .bar-2-4 span{
-    width: 90%;
-}
-.about .row .progress .bar-2-5 span{
-    width: 100%;
-}
+
 .services .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem ,1fr));
@@ -393,12 +367,12 @@ section{
     overflow: hidden;
     box-shadow: var(--box-shadow);
     position: relative;
-    border: 1rem solid transparent;
+    border: 0.9rem solid transparent;
 }
 .portfolio .box-container .box img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit:cover;
 }
 .portfolio .box-container .box .content{
     position: absolute;
@@ -431,6 +405,7 @@ section{
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
     padding: 2rem;
+    text-align: center;
 }
 .contact form .box{
     padding: 1rem 1.5rem;
