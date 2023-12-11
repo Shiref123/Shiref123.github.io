@@ -31,7 +31,7 @@ body {
     word-spacing: 5px;
 }
 .spider {
-    font-size: 3rem;
+    font-size: 4rem;
     animation: animate2 2s linear infinite alternate;
     position: absolute;
     top: 0;
@@ -40,21 +40,14 @@ body {
 .spider::after {
     content: "";
     position: fixed;
-    top: 20px;
+    top: 25px;
     left: 50%;
     width: 0.5px;
     height: 30vh;
     opacity: 0.5;
     background: #fff;
 }
-.spider::before {
-    content: "404";
-    position: fixed;
-    top: -30px;
-    left: -12px;
-    opacity: 0.5;
-    transform: rotate(180deg);
-}
+
 /* animation */
 
 @keyframes animate1 {
