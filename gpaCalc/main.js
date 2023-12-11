@@ -98,16 +98,16 @@ function add() {
   var lastRow = table.rows[table.rows.length - 1];
   var CourseCell = lastRow.insertCell(-1);
   CourseCell.innerHTML =
-    '<input type="text" class="form-control" id="course-name"style="font-size: 26px;" placeholder="Course Name(Not require)">';
+    '<input type="text" class="form-control" id="course-name" placeholder="Name">';
   var CreditCell = lastRow.insertCell(-1);
   CreditCell.innerHTML =
-    '<input type="number" class="form-control" id="credits"style="font-size: 26px;" placeholder="Credits" min="0" max="6" required>';
+    '<input type="number" class="form-control" id="credits" placeholder="Credit" min="0" max="6" required>';
   var GradeCell = lastRow.insertCell(-1);
   GradeCell.innerHTML =
-    '<input type="number" class="form-control" id="grade" min="0"style="font-size: 26px;" max="100" placeholder="Grade" required>';
+    '<input type="number" class="form-control" id="grade" min="0" max="100" placeholder="Grade" required>';
   var ButtonCell = lastRow.insertCell(-1);
   ButtonCell.innerHTML =
-    '<button  onclick="remove(this)"style="font-size: 26px;" class="btn"><i class="fa-solid fa-trash-can text-danger"></i></button>';
+    '<button  onclick="remove(this)" class="btn"><i class="fa-solid fa-trash-can text-danger"></i></button>';
 }
 
 function getData() {
@@ -179,10 +179,3 @@ function cumulative() {
     rankcum.value = calcRankAlll(gpacum.value);
   }
 }
-
-
-
-
-
-
-
