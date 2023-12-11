@@ -55,7 +55,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 .main{
-    background: url(/image_food/f2.jpg)no-repeat;
+    background: url(../HealthyFood/image_food/f2.jpg)no-repeat;
     background-size: cover;
     background-position: center;
 }
