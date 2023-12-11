@@ -40,7 +40,7 @@ body {
 .spider::after {
     content: "";
     position: fixed;
-    top: 25px;
+    top: 30px;
     left: 50%;
     width: 0.5px;
     height: 30vh;
