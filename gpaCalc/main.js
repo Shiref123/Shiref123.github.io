@@ -79,6 +79,27 @@ if (TotalGPA){
 }else{
   document.getElementById("rank").value = "F"; 
 }
+  const gaugeElement = document.querySelector(".gauge");
+
+  function setGaugeValue(gauge, value) {
+    if (value < 0 || value > 1) {
+      return;
+    }
+  
+    gauge.querySelector(".gauge__fill").style.transform = `rotate(${
+      value / 2
+    }turn)`;
+    gauge.querySelector(".gauge__cover").textContent = `${parseFloat(Math.fround(
+      value * 100
+    ).toFixed(1))}%`;
+  }
+  if(gpaRes.value <= 0 || gpaRes.value === NaN){
+    setGaugeValue(gaugeElement, 0 );
+  }
+  else{
+
+    setGaugeValue(gaugeElement, (gpaRes.value/10)+ 0.5 );
+  }
 }
 
 
@@ -171,11 +192,44 @@ function cumulative() {
   var gpacum = document.getElementById('cumres');
   var rankcum = document.getElementById('cumran');
 
-  if (cumoldgpa < 0 || cumoldunit < 0 || cumnewgpa < 0 || cumnewunit < 0) {
+  if (
+    isNaN(cumoldgpa) ||
+    isNaN(cumoldunit) ||
+    isNaN(cumnewgpa) ||
+    isNaN(cumnewunit) ||
+    cumoldgpa < 0 ||
+    cumoldunit < 0 ||
+    cumnewgpa < 0 ||
+    cumnewunit < 0
+  ){
     gpacum.value = 0;
     rankcum.value = 'F';
-  } else {
+  }
+  else {
     gpacum.value = (((cumoldgpa * cumoldunit) + (cumnewgpa * cumnewunit)) / (cumnewunit + cumoldunit)).toFixed(2);
     rankcum.value = calcRankAlll(gpacum.value);
+  }
+  const gaugeElement = document.querySelector("#cumulative .gauge");
+
+  function setGaugeValue(gauge, value) {
+    if (value < 0 || value > 1) {
+      return;
+    }
+  
+    gauge.querySelector("#cumulative .gauge__fill").style.transform = `rotate(${
+      value / 2
+    }turn)`;
+    gauge.querySelector("#cumulative .gauge__cover").textContent = `${parseFloat(Math.fround(
+      value * 100
+    ).toFixed(1))}%`;
+  }
+  var ggg = gpacum.value;
+  console.log(ggg);
+  if(ggg <= 0 || ggg === NaN){
+    setGaugeValue(gaugeElement, 0 );
+  }
+  else{
+
+    setGaugeValue(gaugeElement, (ggg/10)+ 0.5 );
   }
 }
