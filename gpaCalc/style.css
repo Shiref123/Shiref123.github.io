@@ -87,7 +87,7 @@ html::-webkit-scrollbar-thumb{
     background: #009578;
     transform-origin: center top;
     transform: rotate(0.0turn);
-    transition: transform 0.2s ease-out;
+    transition: transform 0.6s ease-out;
   }
   
   .gauge__cover {
